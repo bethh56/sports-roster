@@ -44,7 +44,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <MyNavbar/>
+        <MyNavbar authed={authed}/>
         <h2>INSIDE APP COMPONENT</h2>
         {loadComponent()}
       </div>
