@@ -1,0 +1,32 @@
+{
+  "player1": {
+    "imageUrl":"https://pbs.twimg.com/profile_images/1223019332365692928/PFDkOBON_400x400.jpg",
+    "name": "Michael Scott",
+    "position": "Point Guard",
+    "uid": "vUgpmUkZOiXRULPxh2Bphjen76u1"
+  },
+  "player2": {
+    "imageUrl":"https://pbs.twimg.com/media/CF5SF5QUIAAiP8j?format=jpg&name=small",
+    "name": "Dwight Schrute",
+    "position": "Shooting Guard",
+    "uid": "vUgpmUkZOiXRULPxh2Bphjen76u1"
+  },
+  "player3": {
+    "imageUrl":"https://medias.spotern.com/spots/w1280/175/175832-1547064589.jpg",
+    "name": "Jim Halpert",
+    "position": "Center",
+    "uid": "vUgpmUkZOiXRULPxh2Bphjen76u1"
+  },
+  "player4": {
+    "imageUrl":"https://i.imgur.com/7YtTepK.jpg",
+    "name": "Stanley Hudson",
+    "position": "Power Forward",
+    "uid": "vUgpmUkZOiXRULPxh2Bphjen76u1"
+  },
+  "player5": {
+    "imageUrl":"https://d.wattpad.com/story_parts/387204491/images/14ad656212a2c264883114910910.jpg",
+    "name": "Ryan Howard",
+    "position": "Small Forward",
+    "uid": "vUgpmUkZOiXRULPxh2Bphjen76u1"
+  }
+}
