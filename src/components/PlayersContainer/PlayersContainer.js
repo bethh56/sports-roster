@@ -19,10 +19,9 @@ class PlayersContainer extends React.Component {
 
   render() {
     const { sportsRoster } = this.state;
-    console.error('sports roster', sportsRoster);
     const viewPlayers = sportsRoster.map((player) => <Players key={player.id} player={player}/>);
     return (
-      <div className="PlayersContainer">
+      <div className="PlayersContainer d-flex flex-wrap justify-content-center">
         {viewPlayers}
       </div>
     );

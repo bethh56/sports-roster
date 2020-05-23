@@ -7,7 +7,7 @@ class Players extends React.Component {
     const { player } = this.props;
 
     return (
-      <div className="Players col-4">
+      <div className="Players col-4 pt-3">
         <div className="card">
         <img className="card-img-top" src={player.imageUrl} alt=""/>
         <div className="card-body">
