@@ -1,8 +1,13 @@
 import React from 'react';
 
 import './Players.scss';
+import playerShape from '../../../App/helpers/propz/playerShape';
 
 class Players extends React.Component {
+  static propTypes = {
+    player: playerShape.playerShape,
+  }
+
   render() {
     const { player } = this.props;
 
