@@ -13,16 +13,16 @@ class PlayersContainer extends React.Component {
 
   componentDidMount() {
     playerData.getPlayersByUid(authData.getUid())
-      .then((players) => this.setState({ players }))
+      .then((sportsRoster) => this.setState({ sportsRoster }))
       .catch((err) => console.error('unable to display sports roster players', err));
   }
 
   render() {
-    const { sportsRoster } = this.setState;
+    const { sportsRoster } = this.state;
+    console.error('sports roster', sportsRoster);
     const viewPlayers = sportsRoster.map((player) => <Players key={player.id} player={player}/>);
     return (
       <div className="PlayersContainer">
-        <h1>Inside Player Container</h1>
         {viewPlayers}
       </div>
     );
