@@ -29,9 +29,13 @@ class PlayersContainer extends React.Component {
       .catch((err) => console.error('unable to delete player', err));
   }
 
-  addPlayerEvent = (e) => {
-    e.preventDefault();
-    console.error('button');
+  addPlayerEvent = (newPlayer) => {
+    playerData.addPlayer(newPlayer)
+      .then(() => {
+        this.getPlayerInfo();
+        this.setState({ formOpen: false });
+      })
+      .catch((err) => console.error('unable to add new player', err));
   }
 
   render() {
@@ -40,7 +44,7 @@ class PlayersContainer extends React.Component {
     return (
       <div>
       <button className="btn btn-success mt-2" onClick={() => this.setState({ formOpen: true })}>Add Player</button>
-      { formOpen ? <PlayerForm /> : '' }
+      { formOpen ? <PlayerForm addPlayerEvent={this.addPlayerEvent}/> : '' }
       <div className="PlayersContainer d-flex flex-wrap justify-content-center">
         {viewPlayers}
       </div>
