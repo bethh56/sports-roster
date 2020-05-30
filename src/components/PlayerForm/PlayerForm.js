@@ -13,11 +13,23 @@ class PlayerForm extends React.Component {
     image: '',
     playerName: '',
     playerPosition: '',
+    isEditing: false,
+  }
+
+  componentDidMount() {
+    const { player } = this.props;
+    if (player.name) {
+      this.setState({
+        playerName: player.name,
+        playerPosition: player.position,
+        image: player.imageUrl,
+        isEditing: true,
+      });
+    }
   }
 
   savePlayer = (e) => {
     e.preventDefault();
-    console.error('form button working');
     const { image, playerName, playerPosition } = this.state;
     const { addPlayerEvent } = this.props;
     const newPlayer = {
@@ -44,8 +56,26 @@ class PlayerForm extends React.Component {
     this.setState({ playerPosition: e.target.value });
   }
 
-  render() {
+  updatePlayer = (e) => {
+    e.preventDefault();
+    const { player, putPlayer } = this.props;
     const { image, playerName, playerPosition } = this.state;
+    const updatedPlayer = {
+      imageUrl: image,
+      name: playerName,
+      position: playerPosition,
+      uid: authData.getUid(),
+    };
+    putPlayer(player.id, updatedPlayer);
+  }
+
+  render() {
+    const {
+      image,
+      playerName,
+      playerPosition,
+      isEditing,
+    } = this.state;
 
     return (
       <div>
@@ -80,7 +110,10 @@ class PlayerForm extends React.Component {
             onChange={this.positionChange}
             />
           </div>
-          <button type="submit" className="btn btn-dark" onClick={this.savePlayer}>Submit</button>
+          { isEditing
+            ? <button type="submit" className="btn btn-dark" onClick={this.updatePlayer}>Edit</button>
+            : <button type="submit" className="btn btn-dark" onClick={this.savePlayer}>Submit</button>
+          }
         </form>
       </div>
     );
