@@ -81,7 +81,7 @@ class PlayerForm extends React.Component {
       <div>
         <form className='col-6 offset-3'>
           <div className="form-group">
-            <label htmlFor="playerForm-imgUrl">Image Url</label>
+            <label className="formLabel" htmlFor="playerForm-imgUrl">Image Url</label>
             <input type="text"
             className="form-control"
             id="playerForm-imgUrl"
@@ -91,7 +91,7 @@ class PlayerForm extends React.Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="playerForm-name">Name</label>
+            <label className="formLabel" htmlFor="playerForm-name">Name</label>
             <input type="text"
             className="form-control"
             id="playerForm-name"
@@ -101,7 +101,7 @@ class PlayerForm extends React.Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="playerForm-position">Position</label>
+            <label className="formLabel" htmlFor="playerForm-position">Position</label>
             <input type="text"
             className="form-control"
             id="playerForm-position"
@@ -110,11 +110,13 @@ class PlayerForm extends React.Component {
             onChange={this.positionChange}
             />
           </div>
+          <div className="formBtns">
           { isEditing
             ? <button type="submit" className="submit" onClick={this.updatePlayer}>Submit Edit</button>
             : <button type="submit" className="submit" onClick={this.savePlayer}>Submit</button>
           }
           <button className="closeForm" onClick={() => this.setState({ formOpen: false })}>Close Form</button>
+          </div>
         </form>
       </div>
     );

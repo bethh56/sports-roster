@@ -1,15 +1,13 @@
 @import '../../styles/variables';
 
-.PlayerForm {
-  display: block;
-}
-
 form {
   background-color: $offWhite;
   padding: 10px;
   margin: 5px;
   border: $lightBlue solid 3px;
   border-radius: 5px;
+  text-align: left;
+  
 }
 
 .closeForm {
@@ -36,4 +34,8 @@ form {
   &:hover {
     background-color: #144363;
   }
+}
+
+.formBtns {
+  text-align: center;
 }
