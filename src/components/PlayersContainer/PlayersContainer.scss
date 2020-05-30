@@ -1,3 +1,18 @@
+@import '../../styles//variables';
+
 .PlayersContainer {
   display: block;
+}
+
+.addPlayerBtn {
+  background-color: $addButton;
+  color: white;
+  border: goldenrod solid;
+  border-radius: 4px;
+  padding: 0.75%;
+  width: 200px;
+  margin-top: 16px;
+  &:hover {
+    background-color: rgb(216, 170, 55);
+  }
 }

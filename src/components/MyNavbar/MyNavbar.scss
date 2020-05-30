@@ -1,3 +1,9 @@
+@import '../../styles/variables';
+
 .MyNavbar {
-  background-color: whitesmoke;
+  background-color: $darkGray;
+  border-bottom: $offWhite solid 2px;
+  color: $offWhite;
+  height: 70px;
 }
+

@@ -1,3 +1,41 @@
-.PlayerForm {
-  display: block;
+@import '../../styles/variables';
+
+form {
+  background-color: $offWhite;
+  padding: 10px;
+  margin: 5px;
+  border: $lightBlue solid 3px;
+  border-radius: 5px;
+  text-align: left;
+  
+}
+
+.closeForm {
+  background-color: $red;
+  color: white;
+  border: rgb(172, 10, 10) solid;
+  border-radius: 3px;
+  padding: 1%;
+  width: 105px;
+  margin: 2px;
+  &:hover {
+    background-color: rgb(163, 8, 8);
+  }
+}
+
+.submit {
+  background-color: #0b3c5d;
+  color: white;
+  border: #07314d solid;
+  border-radius: 3px;
+  padding: 1%;
+  width: 105px;
+  margin: 2px;
+  &:hover {
+    background-color: #144363;
+  }
+}
+
+.formBtns {
+  text-align: center;
 }

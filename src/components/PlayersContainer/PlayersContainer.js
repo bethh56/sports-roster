@@ -57,7 +57,7 @@ class PlayersContainer extends React.Component {
     const viewPlayers = sportsRoster.map((player) => <Players key={player.id} editAPlayer={this.editAPlayer} player={player} deletePlayer={this.deletePlayer}/>);
     return (
       <div>
-      <button className="btn btn-success mt-2" onClick={() => this.setState({ formOpen: true })}>Add Player</button>
+      <button className="addPlayerBtn" onClick={() => this.setState({ formOpen: true })}>Add Player</button>
       { formOpen ? <PlayerForm addPlayerEvent={this.addPlayerEvent} player={editPlayer} putPlayer={this.putPlayer}/> : '' }
       <div className="PlayersContainer d-flex flex-wrap justify-content-center">
         {viewPlayers}
