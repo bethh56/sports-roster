@@ -26,14 +26,16 @@ class Players extends React.Component {
     const { player } = this.props;
 
     return (
-      <div className="Players col-4 pt-3">
+      <div className="Players">
         <div className="card">
         <img className="card-img-top" src={player.imageUrl} alt=""/>
         <div className="card-body">
-        <h5 className="card-title">{player.name}</h5>
-        <p className="card-text">{player.position}</p>
-        <button className="btn btn-warning m-1" onClick={this.deletePlayerEvent}> Delete</button>
-        <button className="btn btn-dark m-1" onClick={this.editPlayerEvent}>Edit</button>
+        <h5 className="card-title playerName">{player.name}</h5>
+        <p className="card-text playerPosition">{player.position}</p>
+        <div className="buttons">
+        <button className="deleteBtn" onClick={this.deletePlayerEvent}> Delete</button>
+        <button className="editBtn" onClick={this.editPlayerEvent}>Edit</button>
+        </div>
       </div>
       </div>
       </div>
