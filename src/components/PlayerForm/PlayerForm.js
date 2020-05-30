@@ -111,9 +111,10 @@ class PlayerForm extends React.Component {
             />
           </div>
           { isEditing
-            ? <button type="submit" className="btn btn-dark" onClick={this.updatePlayer}>Edit</button>
-            : <button type="submit" className="btn btn-dark" onClick={this.savePlayer}>Submit</button>
+            ? <button type="submit" className="submit" onClick={this.updatePlayer}>Submit Edit</button>
+            : <button type="submit" className="submit" onClick={this.savePlayer}>Submit</button>
           }
+          <button className="closeForm" onClick={() => this.setState({ formOpen: false })}>Close Form</button>
         </form>
       </div>
     );

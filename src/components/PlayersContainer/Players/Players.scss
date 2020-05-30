@@ -1,12 +1,16 @@
+@import '../../../styles/variables';
+
 .Players {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  flex: 0 1 30%;
-  margin: 1vw;
+  flex: 0 1 20%;
+  margin: 1.5vw;
+  border: $offWhite solid 3px;
+  border-radius: 8px;
   img {
     width: 100%;
-    height: 24vw;
+    height: 47vh;
     object-fit: cover;
   }
 }
@@ -23,8 +27,30 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
 
-.deleteBtn {
-  background-color: blue;
+  .deleteBtn {
+    background-color: $red;
+    color: white;
+    border: rgb(172, 10, 10) solid;
+    border-radius: 3px;
+    padding: 2%;
+    width: 15vw;
+    margin: 2px;
+    &:hover {
+      background-color: rgb(163, 8, 8);
+    }
+  }
+  
+  .editBtn {
+    background-color: $editButton;
+    color: white;
+    border: rgb(88, 88, 148) solid;
+    border-radius: 3px;
+    padding: 2%;
+    width: 15vw;
+    margin: 2px;
+    &:hover {
+      background-color: rgb(57, 57, 207);
+    }
+  }
 }

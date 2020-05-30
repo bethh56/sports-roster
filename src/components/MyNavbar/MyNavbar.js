@@ -19,8 +19,8 @@ class MyNavbar extends React.Component {
     const { authed } = this.props;
     return (
       <div className="MyNavbar">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="#">Sports Roster</a>
+        <nav className="navbar navbar-expand-lg">
+          <h1 className="navbar-brand sportsRoster" >Sports Roster</h1>
                 {
                   authed
                     ? <button className="nav-link btn btn-dark text-white ml-auto" onClick={this.logMeOut}>Logout</button>
